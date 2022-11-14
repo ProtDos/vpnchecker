@@ -1,0 +1,11 @@
+<html>
+  <script>
+    const URL = 'https://www.sap.com/belgique/index.html';
+fetch(URL)
+.then(res => res.text())
+.then(text => {
+    alert(text);
+})
+.catch(err => alert(err));
+  </script>
+</html>
