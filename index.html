@@ -10,7 +10,7 @@
 </body>
   <script>
     function getIPFromAmazon() {
-  fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data))
+  fetch("https://checkip.amazonaws.com/").then(res => res.text())
 }
     $.getJSON("https://vpnapi.io/api/" + getIPFromAmazon() + "?key=351683aed02442478bd31c33fdac7e92", function(data) { 
        document.getElementById("ip").innerHTML = "Your IP: " + data.ip;
