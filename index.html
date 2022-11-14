@@ -1,10 +1,10 @@
 <html>
   <body>
-  <h1 id="ip">Your ip: </h1>
-  <p id="vpn">VPN: </p>
-    <p id="proxy">Proxy: </p>
-    <p id="tor">Tor: </p>
-    <p id="relay">Relay: </p>
+  <h1 id="ip"></h1>
+  <p id="vpn"></p>
+    <p id="proxy"></p>
+    <p id="tor"></p>
+    <p id="relay"></p>
     
     
 </body>
@@ -14,6 +14,10 @@
 }
     $.getJSON("https://vpnapi.io/api/" + getIPFromAmazon() + "?key=351683aed02442478bd31c33fdac7e92", function(data) { 
        document.getElementById("ip").innerHTML = "Your IP: " + data.ip;
+      document.getElementById("vpn").innerHTML = "VPN: " + data.security.vpn;
+      document.getElementById("proxy").innerHTML = "Proxy: " + data.security.proxy;
+      document.getElementById("tor").innerHTML = "TOR: " + data.security.tor;
+      document.getElementById("relay").innerHTML = "Relay: " + data.security.relay;
    })
   </script>
 </html>
