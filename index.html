@@ -1,11 +1,10 @@
 <html>
   <script>
-    const URL = 'https://www.sap.com/belgique/index.html';
-fetch(URL)
-.then(res => res.text())
-.then(text => {
-    alert(text);
-})
-.catch(err => alert(err));
+    function getIPFromAmazon() {
+  fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data))
+}
+    $.getJSON("https://vpnapi.io/api/" + getIPFromAmazon() + "?key=351683aed02442478bd31c33fdac7e92", function(data) { 
+       console.log(data.security);
+   })
   </script>
 </html>
