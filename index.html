@@ -1,24 +1,11 @@
 <html>
   <body>
-  <h1 id="ip">IP: </h1>
-  <p id="vpn">VPN: </p>
-    <p id="proxy">Proxy: </p>
-    <p id="tor">TOR: </p>
-    <p id="relay">Relay: </p>
-    
-    
   <script>
-    <!--window.alert("test");-->
     var jsonObj;
 
     $.getJSON("https://vpnapi.io/api/?key=351683aed02442478bd31c33fdac7e92", function(data) { 
-      jsonObj = data;    
-   });
-    
-    alert(JSON.stringify(jsonObj));
-
-  </script>
-    
-    
+      alert(JSON.stringify(data));
+    });
+  </script>    
 </body>
 </html>
