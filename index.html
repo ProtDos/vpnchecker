@@ -9,11 +9,12 @@
     
   <script>
     <!--window.alert("test");-->
+    var jsonObj;
 
     $.getJSON("https://vpnapi.io/api/?key=351683aed02442478bd31c33fdac7e92", function(data) { 
-      jsonObj = data;
-       window.alert(jsonObj);
-   })
+      jsonObj = data;    
+   });
+    window.alert(jsonObj);
 
   </script>
     
