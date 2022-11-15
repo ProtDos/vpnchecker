@@ -1,11 +1,12 @@
 <html>
   <body>
-    <p>pp</p>
+    <p>ejishishpp</p>
   <script>
     var hihi;
 
     $.getJSON("https://vpnapi.io/api/?key=351683aed02442478bd31c33fdac7e92", function(data) { 
       hihi = data;
+      document.innerHTML = JSON.stringify(hihi);
     });
   </script>    
 </body>
