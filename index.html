@@ -14,7 +14,7 @@
       window.alert("abx");
 }
     getIPFromAmazon()
-    $.getJSON("https://vpnapi.io/api/8.8.8.8?key=351683aed02442478bd31c33fdac7e92", function(data) { 
+    $.getJSON("https://vpnapi.io/api/?key=351683aed02442478bd31c33fdac7e92", function(data) { 
        document.getElementById("ip").innerHTML = "Your IP: " + data.ip;
       document.getElementById("vpn").innerHTML = "VPN: " + data.security.vpn;
       document.getElementById("proxy").innerHTML = "Proxy: " + data.security.proxy;
