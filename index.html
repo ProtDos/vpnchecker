@@ -10,8 +10,7 @@
 </body>
   <script>
     $.getJSON("https://vpnapi.io/api/?key=351683aed02442478bd31c33fdac7e92", function(data) { 
-       document.getElementById("ip").innerHTML = "Your IP: " + data.ip;
-
+       window.alert(data.ip);
    })
   </script>
 </html>
