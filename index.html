@@ -1,13 +1,53 @@
 <html>
-  <body>
-    <p>ejishishpp</p>
-  <script>
-    var hihi;
+    <body>
+        <div class="centered">
+            <div id="single">
+                <p id="ip"></p>
+                <p id="vpn"></p>
+                <p id="proxy"></p>
+                <p id="tor"></p>
+                <p id="relay"></p>
+                <p id="city"></p>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        $.getJSON('https://vpnapi.io/api/?key=351683aed02442478bd31c33fdac7e92', function(data) {
+            console.log(JSON.stringify(data, null, 2));
+            document.getElementById("ip").innerHTML = "Your IP: " + data.ip;
+            
+            document.getElementById("vpn").innerHTML = "VPN: " + data.security.vpn;
+            document.getElementById("proxy").innerHTML = "Proxy: " + data.security.proxy;
+            document.getElementById("tor").innerHTML = "TOR: " + data.security.tor;
+            document.getElementById("relay").innerHTML = "Relay: " + data.security.relay;
+            
+            document.getElementById("city").innerHTML = "Your city: " + data.location.city;
+        });
+    </script>
+    
+    <style>
+        body {
+            background-color: #444;
+            box-shadow:
+                inset 60px 0 150px #f0f,
+                inset -60px 0 150px #0ff;
+        }
+        .centered {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            text-decoration: none;
+            font-size: 30px;
+            color: #6d7b89;
+        }
+        .single {
+            padding: 5px;
+        }
+        
+    </style>
 
-    $.getJSON("https://vpnapi.io/api/?key=351683aed02442478bd31c33fdac7e92", function(data) { 
-      hihi = data;
-      document.innerHTML = JSON.stringify(hihi);
-    });
-  </script>    
-</body>
 </html>
