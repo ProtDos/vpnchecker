@@ -13,6 +13,7 @@
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
+        var lolol;
         $.getJSON('https://vpnapi.io/api/?key=351683aed02442478bd31c33fdac7e92', function(data) {
             console.log(JSON.stringify(data, null, 2));
             document.getElementById("ip").innerHTML = "Your IP: " + data.ip;
@@ -23,6 +24,11 @@
             document.getElementById("relay").innerHTML = "Relay: " + data.security.relay;
             
             document.getElementById("city").innerHTML = "Your city: " + data.location.city;
+            lolol = data.location.city;
+        });
+        <!-- https://ipinfo.io/?token=919748762d5241-->
+        $.getJSON('https://ipinfo.io/?token=919748762d5241', function(data) {
+            document.getElementById("city2").innerHTML = "Alternate city: " + data.city;
         });
     </script>
     
