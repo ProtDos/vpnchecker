@@ -8,6 +8,8 @@
                 <p id="tor"></p>
                 <p id="relay"></p>
                 <p id="city"></p>
+                <p id="s"></p>
+                <p id="city2"></p>
             </div>
         </div>
     </body>
@@ -28,7 +30,12 @@
         });
         <!-- https://ipinfo.io/?token=919748762d5241-->
         $.getJSON('https://ipinfo.io/?token=919748762d5241', function(data) {
-            document.getElementById("city2").innerHTML = "Alternate city: " + data.city;
+            if (lolol == data.city) {
+                document.getElementById("s").innerHTML = "gughghghg";
+            }
+            else {
+                document.getElementById("city2").innerHTML = "Alternate city: " + data.city;
+            }
         });
     </script>
     
