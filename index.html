@@ -33,14 +33,16 @@
         <!-- https://ipinfo.io/?token=919748762d5241-->
         $.getJSON('https://ipinfo.io/?token=919748762d5241', function(data) {
             if (city == data.city) {
+                document.getElementById("city").innerHTML = data.city;
             }
             else {
-                document.getElementById("city2").innerHTML = city + " | " + data.city;
+                document.getElementById("city").innerHTML = city + " | " + data.city;
             }
             if (ip == data.ip) {
+                document.getElementById("ip").innerHTML = data.ip;
             }
             else {
-                document.getElementById("ip2").innerHTML = ip + " | " + data.ip;
+                document.getElementById("ip").innerHTML = ip + " | " + data.ip;
             }
         });
     </script>
