@@ -8,7 +8,7 @@
                 <p id="tor"></p>
                 <p id="relay"></p>
                 <p id="city"></p>
-                <p id="s"></p>
+                <p id="ip2"></p>
                 <p id="city2"></p>
             </div>
         </div>
@@ -35,12 +35,12 @@
             if (city == data.city) {
             }
             else {
-                document.getElementById("city").innerHTML = city + " | " + data.city;
+                document.getElementById("city2").innerHTML = city + " | " + data.city;
             }
             if (ip == data.ip) {
             }
             else {
-                document.getElementById("ip").innerHTML = ip + " | " + data.ip;
+                document.getElementById("ip2").innerHTML = ip + " | " + data.ip;
             }
         });
     </script>
